@@ -1,3 +1,23 @@
-# First Chapter
+# 第四章
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+*重点是总结部分，4.1.3*
+## 关键词：
+* JS变量可以保存两种类型的值：
+    1. 基本数据类型（保存在栈内存中）：undefined、null、string、number、boolean
+    2. 引用数据类型（保存在堆内存中） ：object
+* 检验数据类型的方式：
+    1. 确定值是哪种基本类型：typeof
+    2. 确定值是哪种引用类型：instanceof
+* 执行环境 execution context（上下文）：
+    1. 全局执行环境（全局环境）
+    2. 函数执行环境
+* 作用域（作用域链）：当代码在一个环境中执行时，会创建变量对象的一个作用域链（scope chain）。用途是，保证对执行环境有权访问的所有变量和函数的有序的访问。
+* 延长作用域的方式：with ； catch try
+* 生命周期：局部变量只在函数执行的过程中存在；
+* 解除引用dereferencing：将变量（一般是全局变量，局部变量会在离开执行环境时自动被解除引用）设置为null     
+  `myObject.element=null`     
+  解除引用的真正作用是让值脱离执行环境，以便垃圾收集器下次运行时将其回收。
+
+* 引申阅读：执行环境与作用域
+
+
