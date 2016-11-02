@@ -154,6 +154,8 @@
     5. some()
     ```
     var colors = ["1red", "2orange", "3yellow", "4green"];
+    ```
+    ```
     // every
     var item_every = colors.every(function(item,index,array){
         return (item.length>1);//每一项都true 则返回true
@@ -188,12 +190,11 @@
     ```
     // forEach
     colors.forEach(function(item,index,array){
-        item + "colors";//没有返回值，只对每一项进行操作
+        array[index] = "colors:"+item;//没有返回值，只对每一项进行操作
     });
     console.log("forEach方法输出结果：");
     console.log(colors);
     ```
-    
     ![迭代方法](images/every.png)
 
 
@@ -206,15 +207,13 @@
         return pre+cur+"||";    // 返回所有值之和
     });
     console.log(item_reduce);
-    ```
-    
+    ```    
     ![归并方法](images/reduce.png)
     
 
 * 引申阅读：
     1. toString()与toLocaleString()区别
     2. sort()
-    3. forEach()
 
 
 
