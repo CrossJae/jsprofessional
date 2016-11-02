@@ -214,6 +214,7 @@
 * 引申阅读：
     1. toString()与toLocaleString()区别
     2. sort()
+    3. forEach()
 
 
 
