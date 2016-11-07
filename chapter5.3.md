@@ -19,7 +19,7 @@ get/setMouth()      | 返回/设置月份，0 1 2 3
 get/setHours()      | 返回/设置小时，24小时制 
 get/setMinutes()    | 返回/设置分钟 
 get/setSeconds()    | 返回/设置秒钟 
-get/setTime()       | 返回/设置时间，单位毫秒
+get/setTime()       | 返回/设置时间，单位毫秒，同valueOf()返回的值
  
 
 

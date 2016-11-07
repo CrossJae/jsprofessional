@@ -9,3 +9,4 @@
    * [RegExp类型](chapter5.4.md)
    * [Function类型](chapter5.5.md)
    * [基本包装类型](chapter5.6.md)
+   * [单体内置类型](chapter5.7.md)

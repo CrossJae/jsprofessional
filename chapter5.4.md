@@ -2,45 +2,24 @@
 
 ## RegExp类型
 
-1. 创建Array实例的方法
-    1. new
+1. 定义方法
+    1. 字面量形式
     ```
-    var colors = new Array();
-    var colors = new Array("red","yellow","blue");
-    ```
-    2. 数组字面量表示法
-    ```
-    var colors = [];
-    var colors = ["red","yellow","blue"];
-    ```
-2. 访问数组的值
-    ```
-    alert(colors[2]);
-    ```
-3. length
-    可读取；可写入
-    ```
-    colors.length = 1;
-    ```
-4. 转换方法
-    ```
-    var colors=["red","blue","green"];
-    console.log(colors)
-    console.log(colors.toString())
-    console.log(colors.valueOf())
-    console.log(colors.toLocaleString())
-    console.log(colors.join("||"))
+    var pattern = /[bc]at/i; //匹配第一个bat或者cat，不区分大小写
     ```
     
-    ![转换方法](images/array.png)
-    
-5. 栈方法
-    
+    2. RegExp构造函数
+    ```
+    var pattern = new RegExp("[bc]at","i");
+    ```
 
+2. 标志
 
+标志 | 说明 
+--- |-------------
+g   | 全局global 
+i   | 不区分大小写 
+m   | 多行，可查找多行 
 
-* 引申阅读：
-    1. toString()与toLocaleString()区别
-    2. a
 
 

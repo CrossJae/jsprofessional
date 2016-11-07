@@ -2,43 +2,91 @@
 
 ## Function类型
 
-1. 创建Array实例的方法
-    1. new
+1. 定义函数的方法
+    1. 函数声明
     ```
-    var colors = new Array();
-    var colors = new Array("red","yellow","blue");
+    function sum(num1,num2){
+        return num1+num2
+    }
     ```
-    2. 数组字面量表示法
+    2. 函数表达式
     ```
-    var colors = [];
-    var colors = ["red","yellow","blue"];
-    ```
-2. 访问数组的值
-    ```
-    alert(colors[2]);
-    ```
-3. length
-    可读取；可写入
-    ```
-    colors.length = 1;
-    ```
-4. 转换方法
-    ```
-    var colors=["red","blue","green"];
-    console.log(colors)
-    console.log(colors.toString())
-    console.log(colors.valueOf())
-    console.log(colors.toLocaleString())
-    console.log(colors.join("||"))
+    var sum = function(num1,num2){
+        return num1+num2
+    };
     ```
     
-    ![转换方法](images/array.png)
+2. 函数声明与函数表达式的区别
+    * 解析器先读取函数声明
     
-5. 栈方法
+3. 函数内部属性
+    1. arguments
+        * arguments保存函数参数
+        * arguments.callee，指向arguments对象的函数
+        ```
+        function factorial(num){
+            if(num<1){
+                return 1;
+            }else{
+                return num*arguments.callee(num-1); //等同于factorial(num-1)
+            }
+        }  
+        ```
+        
+    2. this
+        * 引用的是函数执行的环境对象（全局作用域中，this引用的是window）
+      
     
+4. 函数的属性
+    1. length：函数希望接收的命名参数的个数
+    2. prototype
 
-* 引申阅读：
-    1. toString()与toLocaleString()区别
-    2. a
-
-
+5. 函数的方法
+    1. apply()
+    2. call()
+    * apply()与call()都是在特定的作用域中调用函数，实际上等于设置函数体内的this值
+    * 两者最大的作用是扩大函数的作用域
+    ```
+    window.color="red";
+    var o={
+        color:"blue"
+    };
+    
+    function sayColor(){
+        alert(this.color);
+    }
+    
+    sayColor();  //red
+    
+    sayColor.call(this);    //red
+    sayColor.call(window);  //red
+    sayColor.call(o);       //blue
+    ```
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
