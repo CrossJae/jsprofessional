@@ -10,7 +10,7 @@
    * [Function类型](chapter5.5.md)
    * [基本包装类型](chapter5.6.md)
    * [单体内置类型](chapter5.7.md)
-* [第五章 面向对象的程序设计](chapter6.md)
+* [第六章 面向对象的程序设计](chapter6.md)
   * [理解对象](chapter6.1.md)
   * [创建对象](chapter6.2.md)
   * [继承](chapter6.3.md)
