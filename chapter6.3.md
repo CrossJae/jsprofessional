@@ -79,7 +79,28 @@
     ```
     4. 原型式继承
     ```
+    //原理，创建临时构造函数，将其原型指向参数o，返回新的实例
+    //可以用Object.create()代替这段函数
+    function object(o){
+        function F(){};
+        F.prototype=o;
+        return new F();
+    }
     ```
+    ```
+    var person = {
+        name:"Greg",
+        friends:["MissA","MissB","MissC"]
+    }
+    var anotherperson=Object.create(person);
+    console.log(anotherperson.friends);//"MissA","MissB","MissC"
+    anotherperson.friends.push("MissD");
+    console.log(anotherperson.friends);//"MissA","MissB","MissC","MissD"
+    console.log(person.friends);//"MissA","MissB","MissC","MissD" person的引用型数据也被改变了
+    ```
+    好处：不需要创建构造函数，只是想两个对象之间保持类似的情况下，可以使用原型式继承。
+    问题：跟原型模式相同，引用类型的值（friends=[]）会被共享
+    
     5. 寄生式继承
     ```
     ```
