@@ -57,10 +57,10 @@
     }
 
     function SubType(name,age){
-        SuperType.call(this,name);//继承了SuperType
+        SuperType.call(this,name);//继承了SuperType,第二次调用SuperType()
         this.age=age;
     }
-    SubType.prototype=new SuperType();
+    SubType.prototype=new SuperType();// 第一次调用SuperType()
 
     SubType.prototype.sayAge=function(){
         console.log(this.age)
@@ -77,6 +77,7 @@
     instance2.sayName();//"Greg"
     instance2.sayAge();//27
     ```
+    问题：无论什么情况下，都会调用两次SuperType构造函数：一次是创建SubType函数时，一次是SubType函数内部
     4. 原型式继承
     ```
     //原理，创建临时构造函数，将其原型指向参数o，返回新的实例
@@ -103,7 +104,74 @@
     
     5. 寄生式继承
     ```
+    function object(o){
+        function F(){}
+        F.prototype = o;
+        return new F();
+    }
+
+    function createAnother(original){
+        var clone = object(original);//调用函数创建一个新对象
+        clone.sayHi = function(){//增强对象
+            console.log("hi");
+        };
+        return clone;//返回对象
+    }
+
+    var person={
+        name:"Nicholas",
+        friends:["Shelby","Court","Van"]
+    };
+
+    var anotherPerson=createAnother(person);//新对象具有person的属性和方法，还有自己的sayHi()方法
+    anotherPerson.sayHi();
     ```
-    6. 寄生组合式继承
+    问题：函数（sayHi）无法复用，像构造函数
+    6. 寄生组合式继承（最理想的继承）
     ```
+    function object(o){
+        function F(){}
+        F.prototype = o;
+        return new F();
+    }
+
+    function inheritPrototype(subType, superType){
+        var prototype = object(superType.prototype);   //create object
+        prototype.constructor = subType;               //augment object
+        subType.prototype = prototype;                 //assign object
+    }
+                            
+    function SuperType(name){
+        this.name = name;
+        this.colors = ["red", "blue", "green"];
+    }
+    
+    SuperType.prototype.sayName = function(){
+        console.log(this.name);
+    };
+
+    function SubType(name, age){  
+        SuperType.call(this, name);
+        
+        this.age = age;
+    }
+
+    inheritPrototype(SubType, SuperType);
+    
+    SubType.prototype.sayAge = function(){
+        console.log(this.age);
+    };
+    
+    var instance1 = new SubType("Nicholas", 29);
+    instance1.colors.push("black");
+    console.log(instance1.colors);  //"red,blue,green,black"
+    instance1.sayName();      //"Nicholas";
+    instance1.sayAge();       //29
+    
+   
+    var instance2 = new SubType("Greg", 27);
+    console.log(instance2.colors);  //"red,blue,green"
+    instance2.sayName();      //"Greg";
+    instance2.sayAge();       //27
+
     ```

@@ -17,4 +17,4 @@
 3. 定义多个属性object.defineProperties()
 4. 读取属性的特性object.getOwnPropertyDescriptor()
 5. 引申
-    * >_year //_代表一种只能通过对象方法访问属性的命名方式
+    * >\_year //\_代表一种只能通过对象方法访问属性的命名方式
