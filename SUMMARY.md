@@ -14,3 +14,6 @@
   * [理解对象](chapter6.1.md)
   * [创建对象](chapter6.2.md)
   * [继承](chapter6.3.md)
+* [第七章 函数表达式](chapter7.md)
+  * [递归](chapter7.1.md)
+  * [闭包](chapter7.2.md)
