@@ -173,5 +173,4 @@
     console.log(instance2.colors);  //"red,blue,green"
     instance2.sayName();      //"Greg";
     instance2.sayAge();       //27
-
     ```
