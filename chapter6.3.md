@@ -168,7 +168,6 @@
     instance1.sayName();      //"Nicholas";
     instance1.sayAge();       //29
     
-   
     var instance2 = new SubType("Greg", 27);
     console.log(instance2.colors);  //"red,blue,green"
     instance2.sayName();      //"Greg";
