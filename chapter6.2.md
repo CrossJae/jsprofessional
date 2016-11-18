@@ -2,6 +2,8 @@
 
 ## 创建对象
 
+![对象比较](images/oocompare.png)
+
 1. 工厂模式
     ```
     function createPerson(name,age,job){
