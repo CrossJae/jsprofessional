@@ -16,7 +16,7 @@
   * [继承](chapter6.3.md)
 * [第七章 函数表达式](chapter7.md)
   * [递归](chapter7.1.md)
-  * [闭包](chapter7.2.md)
+  * [闭包、作用域、私有变量](chapter7.2.md)
 * [第二十章 JSON](chapter20.md)
 * [第二十一章 Ajax与Comet](chapter21.md)
   * [XMLHttpRequest对象](chapter21.1.md)
