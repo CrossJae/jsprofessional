@@ -1,4 +1,4 @@
-# 第二十章 Ajax与Comet
+# 第二十一章 Ajax与Comet
 
 ## XMLHttpRequest对象
 
