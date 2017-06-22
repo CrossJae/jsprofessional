@@ -26,4 +26,11 @@
   * 只能和break continue一起使用，不经常被使用
 7. break continue
 8. with
+```
+with(location){
+  var qs = search.substring(1); // location.search
+  var hostName = hostmame; // location.hostname
+  var url = href; //location.href
+}
+```
 9. switch

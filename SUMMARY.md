@@ -2,8 +2,9 @@
 
 * [Introduction](README.md)
 * [第一章 javascript简介](chapter1.md)
-* [第三章 基本概念]
+* [第三章 基本概念](chapter3.6.md)
   * [语句](chapter3.6.md)
+  * [函数](chapter3.7.md)
 * [第四章 变量、作用域和内存问题](chapter4.md)
 * [第五章 引用类型](chapter5.md)
   * [Object类型](chapter5.1.md)
@@ -20,6 +21,7 @@
 * [第七章 函数表达式](chapter7.md)
   * [递归](chapter7.1.md)
   * [闭包、作用域、私有变量](chapter7.2.md)
+* [第十七章 错误处理与调试](chapter17.md)
 * [第二十章 JSON](chapter20.md)
 * [第二十一章 Ajax与Comet](chapter21.md)
   * [XMLHttpRequest对象](chapter21.1.md)
