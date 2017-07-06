@@ -1,4 +1,4 @@
-# 第二十三章 离线应用与客户端存储 
+# 第二十三章 离线应用与客户端存储
 
 ## 离线检测
 1. navigator.onLine
@@ -20,12 +20,8 @@
 		Set-Cookie: name=value; expires=Mon, 22-Jan-07 07:10:24 GMT; domain=.wrox.com; path=/; secure
 		Other-header:other-header-value
 		```
+	* 失效时间：
+		1. GMT格式 Wdy,DD-Mon-YYYY HH:MM:SS GMT。`toGMTString()`
+		2. 如果设置以前的时间，则cookie立即删除
+		3.
 4. IndexedDB
-	
-
-
-
-
-
-
-
