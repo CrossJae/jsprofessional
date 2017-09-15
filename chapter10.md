@@ -43,7 +43,7 @@ Node.NOTATION_NODE(12);
 5. 处理文本节点
 	* `normalize()`
 
-## Document类型（nodeType=9）
+## Document类型 (nodeType=9)
 1. 特征，document是HTMLDocument的一个实例
 ```
 nodeType = 9
@@ -56,7 +56,7 @@ ownerDocument = null
 2. 访问子节点的方法
 ```
 // 指向<html>
-document.documentElement //相当于document.childNodes[0]或者document.firstChild,都指向<html>
+document.documentElement //相当于document.childNodes[0]或者document.firstChild
 document.childNodes[0]
 ```
 ```
@@ -84,35 +84,65 @@ document.getElementsByName(); //一般用于单选框
 ```
 5. 特殊集合，都是HTMLCollection对象
 ```
-document.linkes
-document.images
+document.anchors
+document.applets
 document.forms
+document.images
+document.linkes
+```
+6. 文档写入
+```
+document.write(); //会重写页面
+document.writeIn(); //写入在末尾会加换行符
+document.open();
+document.close();
 ```
 
-## Text类型
+## Element类型 (nodeType=1)
+1. 特征
+```
+nodeType = 1;
+nodeName = 元素标签名;
+nodeValue = null;
+parentNode = Document/Element;
+```
+2. 属性
+```
+// 元素标签名
+div.tagName.toLowerCase();
+div.nodeName;
+```
+3. 方法
+```
+// 获取属性
+/**
+ * getAttribute获取属性时，有两类属性很特殊：
+ * 1.style，div.getAttribute('style')返回的是样式文本。div.style返回的是对象。
+ * 2.onclick等事件，div.getAttribute('onclick')返回的是js脚本文本。div.onclick返回的是js函数。
+ */
+div.getAttribute('data-id');
+div.setAttribute('data-id');
+div.removeAttribute('data-id');
+```
 
+## Text类型 (nodeType=3)
 * 创建有文本节点的元素节点
 ```
 var element = document.createElement('div');
 element.className = 'new';
-
 var textNode = document.createTextNode('Hello World!');
-
 element.appendChild(textNode);
 document.body.appendChild(element);
 ```
 * 动态添加script脚本
 ```
-//<script type="text/javascript" src="./script.js"><\/script>
 var script = document.createElement('script');
 script.type = 'text/javascript';
 script.src = './script.js';
-
 document.body.appendChild(script);
 ```
 * 动态添加style标签
 ```
-// <link rel="stylesheet" type="text/css" href="./style.css" />
 var link = document.createElement('link');
 link.rel = 'stylesheet';
 link.type = 'text/css';
