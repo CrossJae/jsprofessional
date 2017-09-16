@@ -255,7 +255,6 @@ parentNode = null;
 	* value
 	* specified：boolean值，区分属性是代码指定(true)的还是默认(false)的
 
-
 ### 常用脚本
 1. 创建有文本节点的元素节点
 ```
