@@ -111,7 +111,10 @@ document.forms[0].scrollIntoView(true);
 * children属性
   * 跟childNodes类似，但只返回元素节点
 * contains()方法
-  * !!!!
+  * 是否包含子元素
+  ```
+  
+  ```
 * 插入文本
   * innerText 属性
   * outerText 属性

@@ -24,6 +24,7 @@
 * [第八章 BOM](chapter8.md)
 * [第十章 DOM](chapter10.md)
 * [第十一章 DOM扩展](chapter11.md)
+* [第十二章 DOM2和DOM3](chapter12.md)
 * [第十三章 事件](chapter13.md)
 * [第十七章 错误处理与调试](chapter17.md)
 * [第二十章 JSON](chapter20.md)
