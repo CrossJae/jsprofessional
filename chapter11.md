@@ -64,11 +64,43 @@ document.hasFocus(); //判断是否文档是否获得焦点，是否正与页面
   ```
 
 ### 字符集属性
+* document.charset[浏览器兼容良好]
+  * default，`alert(document.charset); //'utf-16'`
+  * 可以指定新字符集 `document.charset = 'utf-8'`
+* document.defaultCharset[浏览器兼容不好]根据操作系统和浏览器设置的默认字符
 
-### 自定义数据属性
+### 自定义数据属性[浏览器兼容不好]
+* element.dataset.xxx
+```
+var div = document.getElementById('myDiv');
+// 取到自定义属性是data-appId的值
+var appId = div.dataset.appId;
+// 设置值
+div.dataset.appId = 2345;
+```
 
 ### 插入标记
+* innerHTML
+* outerHTML
+* insertAdjacentHTML
+  * beforebegin 在当前元素之前插入一个紧邻的兄弟元素
+  * afterbegin 在当前元素之下插入一个新的子元素或在第一个子元素之前再插入新的子元素
+  * beforeend 在当前元素之下插入一个新的子元素或在最后一个子元素之后再插入新的子元素
+  * afterend 在当前元素之后插入一个紧邻的兄弟元素
+  ```
+  element.insertAdjacentHTML('beforebegin','<p>hello<\/p>');
+  ```
+* 内存与性能
+```
+var itemsHtml = '';
+for(var i=0,len=values.length;i<len;i++){
+  itemsHtml += '<li>' + values[i] + '<\/li>'
+}
+ul.innerHTML = itemsHtml;
+```
 
-### scrollIntoView()方法
+### scrollIntoView()滚动页面
+* scrollIntoView(true); //调用元素的顶部与视口顶部尽量平齐
+* scrollIntoView(false); //调用元素尽可能在视口中
 
 ### 专有扩展
