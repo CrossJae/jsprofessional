@@ -101,6 +101,22 @@ ul.innerHTML = itemsHtml;
 
 ### scrollIntoView()滚动页面
 * scrollIntoView(true); //调用元素的顶部与视口顶部尽量平齐
-* scrollIntoView(false); //调用元素尽可能在视口中
+* scrollIntoView(false); //调用元素尽可能在视口中,底部平齐
+```
+document.forms[0].scrollIntoView(true);
+```
 
-### 专有扩展
+### 专有扩展（未进入标准，但个别浏览器已支持的有用的属性或方法）
+* 文档模式 document.documentMode
+* children属性
+  * 跟childNodes类似，但只返回元素节点
+* contains()方法
+  * !!!!
+* 插入文本
+  * innerText 属性
+  * outerText 属性
+  * ！！！！
+* 滚动
+  * `scrollIntoViewIfNeede(alignCenter)` 不在窗口内时滚动到窗口中，参数为true时垂直显示
+  * `scrollByLines(lineCount)` 将元素的内容滚动指定行高
+  * `scrollByPages(pageCount)` 将元素的内容滚动指定的页面高度
