@@ -57,3 +57,12 @@ scrollTop
 * 确定元素大小
 
 ### 遍历
+1. NodeIterator
+  * `nextNode()`
+  * `previousNode()`
+2. TreeWalker
+  * `parentNode()`
+  * `firstChild()`
+  * `lastChild()`
+  * `nextSibling()`
+  * `previousSibling()`
