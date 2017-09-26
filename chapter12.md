@@ -10,29 +10,50 @@
 var supportsDOM2CSS = document.implementation.hasFeature('CSS','2.0');
 var suppotrsDOM2CSS2 = document.implementation.hasFeature('CSS2','2.0')
 ```
-* style对象是CSSStyleDeclaration的实例
+* style对象是CSSStyleDeclaration的实例，style对象不包括外部样式表（`<link />`）、嵌入样式表的样式（`<style />`）
 ```
 element.style.width = '100px';
 element.style.backgroundColor = 'green';
 element.style.border = '1px solid black';
 ```
 * style对象的属性方法
-```
-cssText // element.style.cssText or element.style.cssText('xxx')
-length //
-parentRule
-getPropertyCSSValue(propertyName) // 返回两个属性cssText和cssValueType, cssValueType = 0(继承的值) 1(基本的值) 2(值列表) 3(自定义的值)
-getPropertyPriority(propertyName) // 返回优先权标识符
-getPropertyValue(propertyName)
-item(index)
-removeProperty(propertyName)
-setProperty(propertyName,value,priority)
-```
+  1. cssText
+    * 获取css代码 `element.style.cssText`
+    * 设置（重写）css代码 `element.style.cssText = 'width:25px;height:100px;'`
+  2. length
+    * `element.style[i]`
+    * `element.style.item(i)`
+  3. parentRule
+  4. getPropertyCSSValue(propertyName)
+    * 返回cssText和cssValueType
+  5. cssValueType
+    * 0 - 继承的值
+    * 1 - 基本的值
+    * 2 - 值列表
+    * 3 - 自定义的值
+  6. getPropertyPriority(propertyName)
+    * 返回优先权标识符
+  7. getPropertyValue(propertyName)
+    * 常用
+    * 返回cssText
+  8. item(index)
+  9. removeProperty(propertyName)
+    `element.removeProperty('border')`
+  10. setProperty(propertyName, value, priority)
 * 计算的样式
-```
-document.defaultView.getComputedStyle(element, null);
-element.currentStyle;
-```
+  1. document.getComputedStyle()
+    * IE不支持，但支持currentStyle属性
+    * 接受两个参数，第一个参数是元素element,第二个参数是伪元素或者null
+    ```
+    document.defaultView.getComputedStyle(element, null);
+    document.defaultView.getComputedStyle(element, ':after');
+    ```
+  2. element.currentStyle
+    ```
+    var computedStyle = element.currentStyle;
+    alert(computedStyle.backgroundColor);
+    ```
+* 操作样式表
 
 ### 元素大小
 * 偏移量 offset dimension
@@ -66,3 +87,5 @@ scrollTop
   * `lastChild()`
   * `nextSibling()`
   * `previousSibling()`
+
+### 范围
