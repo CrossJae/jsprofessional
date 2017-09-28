@@ -54,6 +54,53 @@ element.style.border = '1px solid black';
     alert(computedStyle.backgroundColor);
     ```
 * 操作样式表
+  * CSSStyleSheet类型表示的是样式表，包括`<link />`(HTMLLinkElement)和`<style>`(HTMLStyleElement)
+  * CSSStyleSheet继承自StyleSheet
+  * `document.styleSheets`获取页面中所有的样式表
+  ```
+  var s = document.styleSheets;
+  console.log(s[0]); // 获取第一个样式表信息
+  ```
+  * styleSheets的属性
+    1. cssRules
+    2. disabled
+    3. href
+    4. media
+    5. ownerNode
+    6. ownerRule
+    7. parentStyleSheet
+    8. rules
+    9. title
+    10. type
+    ![styleSheets的属性](images/stylesheets.jpg)
+  * css规则 `cssRules`
+    1. <style />中有这个属性
+    2. 修改样式
+    ```
+    var sheet = document.styleSheets[0];
+    var rules = sheet.cssRules || sheet.rules;
+    var rule = rules[0];
+    rule.style.backgroundColor = 'red';
+    ```
+  * 创建规则
+  ```
+  sheet.insertRule( 'body { background-color:silver}', 0 ); // 0代表位置
+  sheet.addRule( 'body', 'background-color:silver', 0); // ie，最多插入4095条
+  ```
+  * 删除规则
+  ```
+  sheet.deleteRule(0); // 0代表位置
+  sheet.removeRule(0); // ie
+  ```
+  ```
+  function deleteRule(sheet, index){
+    if(sheet.deleteRule){
+      sheet.deleteRule(index);
+    }else if(sheet.removeRule){
+      sheet.removeRule(index);
+    }
+  }
+  ```
 
 ### 元素大小
 * 偏移量 offset dimension
