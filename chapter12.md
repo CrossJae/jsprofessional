@@ -74,7 +74,7 @@ element.style.border = '1px solid black';
     10. type
     ![styleSheets的属性](images/stylesheets.jpg)
   * css规则 `cssRules`
-    1. <style />中有这个属性
+    1. `<style />`中有这个属性
     2. 修改样式
     ```
     var sheet = document.styleSheets[0];
