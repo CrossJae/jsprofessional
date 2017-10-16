@@ -5,12 +5,12 @@
 ```
 offsetHeight // 元素内容高度 + 水平滚动条高度 + 边框高度 + 内边距
 offsetWidth
-offsetLeft
+offsetLeft // 左侧距离父级元素的距离
 offsetTop
 ```
 * 客户区大小 client dimension
 ```
-clientWidth // 元素内容高度 + 内边距
+clientWidth // 元素可视内容高度 + 内边距
 clientHeight
 ```
 * 滚动大小 scroll dimension

@@ -22,6 +22,7 @@
   * [递归](chapter7.1.md)
   * [闭包、作用域、私有变量](chapter7.2.md)
 * [第八章 BOM](chapter8.md)
+* [第九章 客户端检测](chapter9.md)
 * [第十章 DOM](chapter10.md)
 * [第十一章 DOM扩展](chapter11.md)
 * [第十二章 DOM2和DOM3](chapter12.1.md)
