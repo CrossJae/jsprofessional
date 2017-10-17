@@ -16,4 +16,29 @@
     * 具体的使用不太了解？
 
 ### 事件处理程序（事件侦听器）
-
+1. HTML事件处理程序
+    * `<div data="click-event" onclick="alert(this.data)"></div>`
+    * 主要缺点：HTML与JS **重度耦合**
+2. DOM0级事件处理程序
+    * 常用
+    ```
+    var btn = document.getElementById('myBtn');
+    btn.onclick = function(){
+        alert(this.id); // myBtn. this引用的是当前元素
+    }
+    ```
+    * 移除 `btn.onclick = null;`
+3. DOM2级事件处理程序
+    * 常用。优点：可以绑定多个事件
+    * 通过 `addEventListener` 添加的事件处理程序，只能使用 `removeEventListener` 方法移除
+    * 绑定的匿名函数不可以被移除
+    ```
+    var btn = document.getElementById('myBtn');
+    var handler = function(){
+        alert(this.id);
+    }
+    btn.addEventListener('click', handler, false);
+    // 移除
+    btn.removeEventListener('click', handler, false);
+    ```
+4. IE事件处理程序
