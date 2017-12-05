@@ -1,13 +1,13 @@
 # 第二十章 JSON
 
 ## 概念
-* 由于*结构化数据XML*过于繁琐冗长，出现了JSON（Javascript Object Notation JS对象表示法）
+* 由于 *结构化数据XML* 过于繁琐冗长，出现了JSON（Javascript Object Notation JS对象表示法）
 * XML：XML数据结构要解析成DOM文档，提取数据也很麻烦
 * JSON：可以解析成JS对象，直接用点语法调用
 * JSON是一种数据格式，而不是编程语言，所以不是只有JS才能访问JSON，很多编程语言都有针对JSON的解析器和序列化器。
 
 ## 语法
-* 简单值 
+* 简单值
 ```
 "Hello"
 5
@@ -35,11 +35,11 @@
         year:2011
     }
     //var jsonText=JSON.stringify(book);// {"title":"js","authors":["nick"],"edition":3,"year":2011}
-    
+
     //数组过滤器
     //过滤后只剩authors属性
     //var jsonText=JSON.stringify(book,["authors"]);// {"authors":["nick"]}
-    
+
     //函数过滤器
     var jsonText=JSON.stringify(book,function(key,value){// {"title":"js","authors":["nick"],"edition":3,"year":5000}
         switch(key){
@@ -86,7 +86,7 @@
         2. 提供第二个参数，则应用这个函数过滤，传入函数过滤的值是第一步返回的值
         3. 对第二步返回的值进行相应的序列化
         4. 提供第三个参数，执行格式化
-    
+
 2. 解析 parse()
 ```
 var book={
