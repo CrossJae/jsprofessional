@@ -13,17 +13,17 @@
     var colors = [];
     var colors = ["red","yellow","blue"];
     ```
-    
+
 2. 访问数组的值
     ```
     alert(colors[2]);
     ```
-    
+
 3. length 可读取；可写入
     ```
     colors.length = 1;
     ```
-    
+
 4. 转换方法
     ```
     var colors = ["red","blue","green"];
@@ -34,9 +34,9 @@
     console.log(colors.join("||"))
     ```
     ![转换方法](images/array.png)
-    
+
 5. 栈方法
-    * 为数组提供类似栈的数据结构 
+    * 为数组提供类似栈的数据结构
     * push() pop()，后进先出LIFO，后端添加 后端移除
     ```
     var colors = ["red","blue","green"];
@@ -47,7 +47,7 @@
     console.log(item);
     ```
     ![栈方法](images/array1.png)
-    
+
 6. 队列方法
     1. push() shift()，先进先出FIFO，后端添加 前端移除
     ```
@@ -56,7 +56,7 @@
     console.log(item);
     ```
     ![队列方法](images/array2.png)
-    
+
     2. unshift() pop()，前端添加 后端移除
     ```
     var colors = [];
@@ -66,7 +66,7 @@
     console.log(item);
     ```
     ![队列方法](images/array3.png)
-    
+
 7. 重排序方法
     1. 翻转数组 colors.reverse()
     ```
@@ -75,7 +75,7 @@
     console.log(item)
     ```
     ![翻转数组](images/reverse.png)
-    
+
     2. 升序排列数组 colors.sort() ：调用toString()后比较字符串的升序排列
     ```
     var num = [59,230,140,30];
@@ -96,14 +96,14 @@
     console.log(num);
     ```
     ![升序排列数组](images/sort.png)
-    
+
     ```
     //升序排列函数，适用于数值类型
     function compare(value1,value2){
         return value1-value2
     }
     ```
-    
+
 8. 操作方法
     1. concat()
     2. slice()
@@ -133,7 +133,7 @@
     console.log(colors);    //原始数组未改变
     ```
     ![操作方法](images/concat.png)
-    
+
 9. 位置方法 IE9+
     1. indexOf()，从数组开头向后查找
     2. lastIndexOf()，从数组的末尾向前查找
@@ -142,7 +142,7 @@
     var item_indexof = colors.indexOf("2orange");   //查找2orange的索引值
     console.log(item_indexof)   //返回1
     ```
-    
+
 10. 迭代方法 IE9+
     1. every()
     2. filter()
@@ -193,7 +193,7 @@
     console.log(colors);
     ```
     ![迭代方法](images/every.png)
-    
+
 11. 归并方法(缩小方法) IE9+
     1. reduce()
     2. reduceRight()
@@ -205,11 +205,10 @@
     console.log(item_reduce);
     ```    
     ![归并方法](images/reduce.png)
-    
+
 * 引申阅读：
     1. toString()与toLocaleString()区别
     2. sort()
     3. forEach()
 
-
-
+*-end-*

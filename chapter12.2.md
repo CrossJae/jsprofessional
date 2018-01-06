@@ -30,3 +30,5 @@ scrollTop
   * `document.body.clientHeight` 获取的是窗口高度
   * `document.body.scrollHeight` 获取的是文档高度
 * 确定元素大小`getBoundingClientRect()`
+
+*-end-*

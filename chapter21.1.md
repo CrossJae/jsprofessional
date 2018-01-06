@@ -22,3 +22,5 @@ function createXHR(){
 3. HTTP头部信息
 4. GET请求
 5. POST请求
+
+*-end-*

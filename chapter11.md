@@ -151,3 +151,5 @@ document.forms[0].scrollIntoView(true);
   * `scrollIntoViewIfNeede(alignCenter)` 不在窗口内时滚动到窗口中，参数为true时垂直显示
   * `scrollByLines(lineCount)` 将元素的内容滚动指定行高
   * `scrollByPages(pageCount)` 将元素的内容滚动指定的页面高度
+
+*-end-*

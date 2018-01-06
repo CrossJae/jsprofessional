@@ -15,10 +15,10 @@
         return num1+num2
     };
     ```
-    
+
 2. 函数声明与函数表达式的区别
     * 解析器先读取函数声明
-    
+
 3. 函数内部属性
     1. arguments
         * arguments保存函数参数
@@ -32,14 +32,14 @@
             }
         }  
         ```
-        
+
     2. this
         * 引用的是函数执行的环境对象（全局作用域中，this引用的是window）
-        
+
 4. 函数的属性
     1. length：函数希望接收的命名参数的个数
     2. prototype
-    
+
 5. 函数的方法
     1. apply()
     2. call()
@@ -50,42 +50,16 @@
     var o={
         color:"blue"
     };
-    
+
     function sayColor(){
         alert(this.color);
     }
-    
+
     sayColor();  //red
-    
+
     sayColor.call(this);    //red
     sayColor.call(window);  //red
     sayColor.call(o);       //blue
     ```
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+*-end-*      

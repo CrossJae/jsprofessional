@@ -6,7 +6,7 @@
     1. encodeURI()、decodeURI()
     2. encodeURIComponent()、decodeURIComponent()
     3. eval()
-    
+
 2. Math对象
     1. Math对象的属性 比如Math.PI
     2. min()和max()
@@ -15,3 +15,5 @@
         2. Math.floor() 向下舍入
         3. Math.round() 四舍五入
     4. random() 返回0-1的随机数
+
+*-end-*

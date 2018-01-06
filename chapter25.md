@@ -29,4 +29,5 @@
 		* worker全局对象是worker本身
 	* 包含其他脚本
 		* `importScripts("file1.js","file2.js")` 每个加载过程都是异步的，
+
 *-end-*

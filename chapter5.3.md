@@ -74,3 +74,5 @@ Date.prototype.toLocaleFormat()//
 Date.prototype[@@toPrimitive]//
 Date.prototype.toSource()//
 ```
+
+*-end-*

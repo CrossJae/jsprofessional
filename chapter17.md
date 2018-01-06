@@ -23,4 +23,6 @@ try{
 ## 调试技术
 * console.log
 
-## 常见的IE错误 
+## 常见的IE错误
+
+*-end-*

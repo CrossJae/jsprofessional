@@ -8,7 +8,7 @@
         var person = new Object();
         person.name = "CROSS";
         person.age = 29;
-        
+
         ```
     2. 对象字面量表示法
         ```对象字面量表示法
@@ -23,13 +23,12 @@
         person.age = 29;
         ```
         * 对象字面量的优点：给人封装数据的感觉；向函数提供大量的可选参数时的首选
-        
+
 2. 访问属性方法
     ```
     // 点访问（推荐）
     alert(person.name);
     // 通过变量访问
-    alert(person["name"]); 
+    alert(person["name"]);
     ```
-
-
+*-end-*

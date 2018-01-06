@@ -42,3 +42,5 @@ location.reload(true); //从服务器重新加载
 
 ### navigator对象
 * 通常使用的是`navigator.userAgent`
+
+*-end-*

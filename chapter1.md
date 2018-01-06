@@ -7,3 +7,5 @@
 * DOM1：DOM CORE + DOM HTML
 * DOM2：DOM VIEW + DOM EVENTS (定义了事件)+ DOM STYLE（css） + DOM Traversal and Range（遍历和范围）
 * DOM3: DOM Load and Save（加载保存） + DOM Validation（验证）
+
+*-end-*
