@@ -28,6 +28,7 @@ if(Object.prototype.toString.call(o) === '[Object Array]'){ alert '是数组'}
 var o = new Object();
 o.toString(); // returns [object Object]
 ```
+**之所以不用`o.toString()`而是用`Object.prototype.toString.call(o)`，是因为Array和其他对象可能会重写toString方法，并不会返回`[Object type]`**
 * 双逻辑非操作的作用是什么？
 * 不要把能力检测当作浏览器检测使用，比如
 ```
