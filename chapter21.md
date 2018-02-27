@@ -41,6 +41,7 @@ function validate(field) {
 
     //将方法地址复制给onreadystatechange属性  
     //类似于电话号码  
+    // 在send之前绑定onreadystatechange事件
     xmlHttp.onreadystatechange=function() {  
     //Ajax引擎状态为成功  
     if (xmlHttp.readyState == 4) {  

@@ -2,7 +2,7 @@
 
 ## XMLHttpRequest对象
 
-1. Ajax核心技术是XMLHttpRequest对象（简称XHR），无须刷新页面即可从服务器取得数据，但不一定是xml数据。
+1. Ajax核心技术是XMLHttpRequest对象（简称XHR），和服务器进行异步通信，无须刷新页面即可从服务器取得数据，但不一定是xml数据。
 2. 各浏览器版本兼容的创建XHR对象的方法
 ```
 function createXHR(){

@@ -8,7 +8,25 @@ if(object.sort){...} // 项目中经常使用此方法来判断是端内还是�
 ```
 * 尽量使用typeof作为能力检测的依据，比如
 ```
-if(typeof object.sort == 'function'){...}
+typeof 'abc'; // string
+typeof 123; // number
+typeof true; // boolean
+typeof []; // object
+typeof {}; // object
+typeof null; // object
+typeof undefined; // undefined
+typeof function(){}; // function
+typeof a; // undefined
+```
+所以，null / [] / {} 不能用typeof判断出来。
+判断对象是不是数组的方法
+```
+if(Object.prototype.toString.call(o) === '[Object Array]'){ alert '是数组'}
+```
+原理，Object原型上的toString方法返回的是对象内部属性`[Object type]`，比如
+```
+var o = new Object();
+o.toString(); // returns [object Object]
 ```
 * 双逻辑非操作的作用是什么？
 * 不要把能力检测当作浏览器检测使用，比如
