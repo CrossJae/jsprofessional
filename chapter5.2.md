@@ -126,6 +126,7 @@
     console.log("splice方法输出结果");
     var item_splice1 = colors.splice(2,1);  //删除，删除索引从2开始（包括2）的1个
     console.log(item_splice1);  //返回被删除的项
+    console.log(colors);// 原始数组改变
     var item_splice2 = colors.splice(1,0,"5cyan","6blue");  //插入，从索引是1的位置添加，0是要删除的个数
     console.log(item_splice2);  //返回空
     var item_splice3 = colors.splice(1,1,"7purple");    //替换，删除索引从1开始（包括1）的1个，并添加
