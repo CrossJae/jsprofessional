@@ -3,22 +3,42 @@
 ## XMLHttpRequest对象
 
 1. Ajax核心技术是XMLHttpRequest对象（简称XHR），和服务器进行异步通信，无须刷新页面即可从服务器取得数据，但不一定是xml数据。
-2. 各浏览器版本兼容的创建XHR对象的方法
+2. **各浏览器版本兼容的创建XHR对象的方法**
 ```
 function createXHR(){
-  if(typeof XMLHttpRequest != 'undefined'){
+  if(typeof XMLHttpRequest != 'undefined'){ // ie7以上版本
     return new XMLHttpRequest();
-  }else if (typeof ActiveXObject != 'undefined'){
-    // 兼容<ie7的版本
+  }else if (typeof ActiveXObject != 'undefined'){ // 兼容<ie7的版本
+    if(typeof arguments.callee.activeXString != 'string'){
+      var versions = ["MSXML2.XMLHttp.6.0", "MSXML2.XMLHttp.3.0", "MSXML2.XMLHttp"],
+          i, len;
+      for(i=0, len=versions.length; i<len; i++){
+        try{
+          new ActiveXObject(version[i]);
+          arguments.callee.activeXString = version[i];
+          break;
+        }catch(ex){
+          // 跳过
+        }
+      }
+    }
+    return new ActiveXObject(arguments.callee.activeXString);
+  }else{
+    throw new Error('No XHR object available.');
   }
 }
 ```
 2. XHR的用法
-    1. open()，三个参数：请求类型（get / post）、请求url、是否异步（false是同步，true是异步）发送请求。opne()并不会真的发送一个请求，而是启动一个请求以备发送。
-    ```
-    xhr.open("get","example.php",false)
-    ```
-    2. 只能向同域、相同端口、相同协议的url发送请求，否则会报错
+    1. open()，`open(method, url, async)`
+      * method:（get / post）、请求url、是否异步（false是同步，true是异步）。
+      * opne()并不会真的发送一个请求，而是 **启动** 一个请求以备发送。
+      ```
+      xhr.open("get", "example.php", false);
+      ```
+      * 只能向同域、相同端口、相同协议的url发送请求，否则会报错，也就是说必须同域！
+    2. send()，`send(null)` 发送特定请求，参数必须
+      * send接收的参数是作为 **请求主体** 发送的数据
+      * 调用send之后，请求就会被分派到服务器
 3. HTTP头部信息
 4. GET请求
 5. POST请求

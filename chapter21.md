@@ -2,8 +2,10 @@
 
 ## 关键词
 * Ajax: Asynchronous JavsScript + XML
+* Ajax核心：XMLHttpRequest对象（微软引入）
 * Ajax原理：通过XMR（XMLHttpRequest）对象从服务器取得数据，然后通过js操作DOM插入数据更新页面
-* 虽然XMR名字中包含XML，但AJAX通信与数据格式无关。
+  * 更早之前，js需要通过java applet或者flash中间层向服务器发送请求。现在可以直接使用浏览器的原生通信能力XMLHttpRequest了，所以 **XMLHttpRequest** 是原生方法。
+* 虽然XMR名字中包含XML，但AJAX通信与数据格式无关，完全可以是json格式。
 * 实现局部刷新的方法：
   * iframe，通过修改iframe的src，来实现iframe内的页面重载刷新，实质也是页面重载，会有性能问题
   * ajax，js发送异步请求，服务器查询数据库返回数据，js操作dom
