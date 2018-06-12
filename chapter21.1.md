@@ -33,13 +33,38 @@ function createXHR(){
       * method:（get / post）、请求url、是否异步（false是同步，true是异步）。
       * opne()并不会真的发送一个请求，而是 **启动** 一个请求以备发送。
       ```
-      xhr.open("get", "example.php", false);
+      xhr.open("get", "example.php", false); //同步请求，浏览器会等待请求结束进行后续操作
       ```
       * 只能向同域、相同端口、相同协议的url发送请求，否则会报错，也就是说必须同域！
     2. send()，`send(null)` 发送特定请求，参数必须
       * send接收的参数是作为 **请求主体** 发送的数据
       * 调用send之后，请求就会被分派到服务器
+    3. 响应相关属性
+      * responseText
+      * status
+      * statusText
+      * readyState
+    4. abort(), 取消异步请求
 3. HTTP头部信息
+每个http请求和响应都会带有头部信息
+  * setRequestHeader('key': value)，在调用open之后，send之前，调用该方法
+  ```
+  var xhr = createXHR(); // 见上
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4){
+      if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
+        alert(xhr.responseText);
+      }else{
+        alert('unsuccessful' + xhr.status);
+      }
+    }
+  };
+  xhr.open("get", "example.php", true);
+  xhr.setRequestHeader('MyHeader', "MyValue");
+  xhr.send(null); //无数据时必须填写null
+  ```
+  * getResponseHeader('key') 获取响应字段的头部信息
+  * getAllResponseHeaders(); 获取全部头部信息，返回是多行文本
 4. GET请求
 5. POST请求
 
