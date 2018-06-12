@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](./content/README.md)
+* [Introduction](README.md)
 * [第一章 javascript简介](./content/chapter1.md)
 * [第三章 基本概念](./content/chapter3.6.md)
   * [语句](./content/chapter3.6.md)
