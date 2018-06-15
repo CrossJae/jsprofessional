@@ -10,5 +10,6 @@
     * `xhr.timeout = 1000` 1秒钟
     * 会被`ontimeout`事件处理 `xhr.ontimeout = function(){...}`
 3. overrideMimeType()
+    * 重写响应的MIME类型
 
 *-end-*
