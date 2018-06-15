@@ -17,7 +17,8 @@
 	* type
 		* `performance.navigation.TYPE_NAVIGATE(0)` 页面第一次加载
 
-## Web Workers
+## Web Workers - 不占用js自身线程
+	* 实例：有人用web worker写了一个 [扫雷程序](https://github.com/michaelbutler/minesweeper)
 	* 使用workder
 		* `var worker = new Worker("xxx.js")` 浏览器会下载xxx.js
 		* `worker.postMessage('start!')` 给Worker传递消息
