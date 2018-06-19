@@ -39,3 +39,7 @@
   * [跨域资源共享](./content/chapter21.4.md)
   * [其他跨域技术](./content/chapter21.5.md)
   * [安全](./content/chapter21.6.md)
+* [第二十二章 高级技巧](./content/chapter22.md)
+* [第二十三章 离线应用与客户端存储](./content/chapter23.md)
+* [第二十四章 最佳实践](./content/chapter24.md)
+* [第二十五章 新兴的API](./content/chapter25.md)
