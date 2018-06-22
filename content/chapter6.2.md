@@ -102,5 +102,19 @@
     var person1 = Person("Strange",27,"Doctor");
     person1.sayName();
     ```
-    
+
+### 原型补充
+* 每个函数function都自带一个prototype属性
+* prototype属性是一个指针，指向原型对象
+* 原型对象中默认创建constructor属性
+* constructor属性指向构造函数本身
+    ```
+    Person.prototype.constructor = Person; // true
+    ```
+* 构造函数的对象，默认有[[Prototype]]属性
+* [[Prototype]]属性指向原型对象
+    ```
+    person.__proto__ === Person.prototype; // true
+    ```
+
 *-end-*
