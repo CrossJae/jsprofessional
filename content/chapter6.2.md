@@ -115,6 +115,8 @@
 * [[Prototype]]属性指向原型对象
     ```
     person.__proto__ === Person.prototype; // true
+
+    // person.sayName()相当于Person.prototype.sayName()
     ```
 
 *-end-*
