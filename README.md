@@ -3,10 +3,8 @@
 供学习记录使用
 
 #### Summary
-* [第一章 javascript简介](./content/chapter1.md)
-* [第三章 基本概念](./content/chapter3.6.md)
-  * [语句](./content/chapter3.6.md)
-  * [函数](./content/chapter3.7.md)
+* [第一章 JavaScript简介](./content/chapter1.md)
+* [第三章 基本概念](./content/chapter3.md)
 * [第四章 变量、作用域和内存问题](./content/chapter4.md)
 * [第五章 引用类型](./content/chapter5.md)
   * [Object类型](./content/chapter5.1.md)
