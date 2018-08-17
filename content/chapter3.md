@@ -102,4 +102,18 @@ with(location){
   console.log(person.name)//输出'XX'
   ```
 
+## 补充：命名
+1. 好的代码胜过好的注释，优化代码的可读性，减少不必要的注释。
+2. 规范
+  1. 避免抽象的名字
+  2. 在名字中增加额外信息
+  3. 有目的的使用大小写、下划线命名
+    1. CamelCase表示类名
+    2. lower_separated表示变量名
+    3. CONSTANT_NAME表示常量
+    4. $all_images表示jQuery返回的结果
+3. 为大作用域采用更长的名字
+4. 使用不会被误解的名字
+5. 使用英文命名
+
 *-end-*
